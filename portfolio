@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amrahata Paalisbo | Social Media Manager &amp; Content Creator</title>
+<meta name="description" content="Social Media Manager with 14+ years in digital marketing. Content creation, scheduling, community management, and basic video editing for wellness, lifestyle, and home-services brands.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231B231E'/%3E%3Ctext x='50' y='68' font-size='56' fill='%23E0603D' text-anchor='middle' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B231E;
+    --ink-2:#222D26;
+    --paper:#EFEBDD;
+    --card:#F8F5EC;
+    --coral:#E0603D;
+    --coral-dark:#C44E2E;
+    --gold:#C99A3C;
+    --sage:#7E9A80;
+    --text-on-ink:#F3EFE3;
+    --muted-on-ink:rgba(243,239,227,.68);
+    --muted-on-paper:rgba(27,35,30,.66);
+    --line-paper:rgba(27,35,30,.14);
+    --line-ink:rgba(243,239,227,.18);
+    --radius:18px;
+    --container:1140px;
+    --display:'Bricolage Grotesque', sans-serif;
+    --quote:'Instrument Serif', serif;
+    --body:'Inter', sans-serif;
+    --mono:'Space Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  img,svg{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  section,footer{scroll-margin-top:92px;}
+  .container{max-width:var(--container);margin:0 auto;padding:0 28px;}
+
+  .eyebrow{font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;align-items:center;gap:9px;color:inherit;opacity:.85;}
+  .eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--coral);flex-shrink:0;}
+
+  /* ---------- NAV ---------- */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(27,35,30,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-ink);}
+  .nav .container{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .nav-logo{font-family:var(--mono);color:var(--text-on-ink);font-size:.85rem;letter-spacing:.08em;}
+  .nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0;}
+  .nav-links a{color:var(--muted-on-ink);font-size:.9rem;font-weight:500;transition:color .2s;}
+  .nav-links a:hover{color:var(--text-on-ink);}
+  .nav-right{display:flex;align-items:center;gap:14px;}
+  .nav-cta{font-family:var(--mono);font-size:.78rem;background:var(--coral);color:var(--ink);padding:10px 18px;border-radius:999px;font-weight:700;transition:background .2s,transform .2s;}
+  .nav-cta:hover{background:var(--text-on-ink);transform:translateY(-1px);}
+  .nav-toggle{display:none;background:none;border:0;color:var(--text-on-ink);font-size:1.6rem;cursor:pointer;line-height:1;padding:4px;}
+  @media (max-width:880px){
+    .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--ink);padding:22px 28px 28px;gap:18px;border-bottom:1px solid var(--line-ink);}
+    .nav-links.open{display:flex;}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{background:radial-gradient(circle at 18% -10%, #25312A 0%, var(--ink) 55%);color:var(--text-on-ink);padding:168px 0 0;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle, rgba(224,96,61,.20), transparent 70%);top:-200px;right:-180px;}
+  .hero-inner{max-width:700px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;position:relative;z-index:2;padding:0 28px;}
+  .hero-photo{width:140px;height:140px;border-radius:32px;object-fit:cover;border:3px solid var(--coral);box-shadow:0 18px 38px rgba(0,0,0,.35);margin-bottom:6px;}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,6vw,4.1rem);margin:4px 0 0;letter-spacing:-.01em;}
+  .hero-tagline{font-family:var(--display);font-weight:600;font-size:clamp(1.02rem,2.4vw,1.3rem);color:var(--gold);margin:0;}
+  .hero-body{color:var(--muted-on-ink);font-size:1.04rem;max-width:540px;margin:6px 0 0;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:10px;}
+  .btn{font-family:var(--mono);font-size:.84rem;padding:13px 24px;border-radius:999px;font-weight:700;transition:transform .2s,background .2s,color .2s,border-color .2s;display:inline-flex;align-items:center;gap:8px;cursor:pointer;}
+  .btn-primary{background:var(--coral);color:var(--ink);border:1px solid var(--coral);}
+  .btn-primary:hover{background:var(--text-on-ink);border-color:var(--text-on-ink);transform:translateY(-2px);}
+  .btn-ghost{border:1px solid var(--line-ink);color:var(--text-on-ink);background:transparent;}
+  .btn-ghost:hover{border-color:var(--coral);color:var(--coral);}
+
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid var(--line-ink);border-bottom:1px solid var(--line-ink);position:relative;z-index:2;}
+  .stat{padding:26px 14px;text-align:center;border-right:1px solid var(--line-ink);}
+  .stat:last-child{border-right:0;}
+  .stat-num{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,3vw,1.85rem);color:var(--text-on-ink);}
+  .stat-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted-on-ink);margin-top:6px;}
+  @media (max-width:680px){
+    .hero-stats{grid-template-columns:repeat(2,1fr);}
+    .stat:nth-child(2n){border-right:0;}
+    .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line-ink);}
+  }
+
+  /* ---------- SECTIONS (shared) ---------- */
+  .section{padding:104px 0;}
+  .section-head{max-width:660px;margin-bottom:44px;}
+  .section-head h2{font-family:var(--display);font-size:clamp(1.7rem,4vw,2.4rem);margin:.45em 0 0;font-weight:700;line-height:1.2;}
+  .lede{max-width:660px;color:var(--muted-on-paper);font-size:.97rem;margin:-10px 0 40px;}
+
+  /* ---------- ABOUT ---------- */
+  .about-text{max-width:700px;}
+  .about-text p{margin:0 0 18px;color:rgba(27,35,30,.82);}
+  .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .pill{font-family:var(--mono);font-size:.76rem;padding:8px 14px;border:1px solid var(--line-paper);border-radius:999px;background:var(--card);}
+
+  /* ---------- FEED GRID (accounts + samples share this language) ---------- */
+  .feed-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .account-card{aspect-ratio:1/1;background:var(--card);border:1px solid var(--line-paper);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s,border-color .25s,box-shadow .25s;}
+  .account-card:hover{transform:translateY(-4px);border-color:var(--coral);box-shadow:0 18px 30px rgba(27,35,30,.10);}
+  .account-platform{font-family:var(--mono);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--sage);}
+  .account-handle{font-family:var(--display);font-weight:700;font-size:1.1rem;margin-top:8px;word-break:break-word;}
+  .account-niche{font-family:var(--mono);font-size:.68rem;color:var(--muted-on-paper);margin-top:6px;}
+  .account-desc{font-size:.86rem;color:rgba(27,35,30,.75);margin-top:14px;flex-grow:1;}
+  .account-link{font-family:var(--mono);font-size:.76rem;color:var(--coral-dark);font-weight:700;margin-top:14px;}
+  @media (max-width:980px){.feed-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.feed-grid{grid-template-columns:1fr;}.account-card{aspect-ratio:auto;min-height:220px;}}
+
+  .nda-note{font-size:.85rem;color:var(--muted-on-paper);margin-top:22px;border-left:2px solid var(--line-paper);padding-left:14px;max-width:660px;}
+
+  /* ---------- PROCESS ---------- */
+  .timeline{display:flex;flex-direction:column;border-left:1px solid var(--line-paper);margin-left:18px;}
+  .step{position:relative;padding:0 0 42px 38px;}
+  .step:last-child{padding-bottom:0;}
+  .step::before{content:attr(data-num);position:absolute;left:-23px;top:-2px;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--text-on-ink);font-family:var(--mono);font-size:.78rem;display:flex;align-items:center;justify-content:center;font-weight:700;}
+  .step h3{font-family:var(--display);margin:0 0 6px;font-size:1.15rem;}
+  .step p{margin:0;color:rgba(27,35,30,.75);max-width:520px;font-size:.95rem;}
+
+  .callout{margin-top:50px;padding:32px 36px;background:var(--card);border-left:3px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;max-width:680px;}
+  .callout-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+  .callout p{font-family:var(--quote);font-style:italic;font-size:1.2rem;margin:0;color:var(--ink);line-height:1.5;}
+
+  /* ---------- TOOLS ---------- */
+  .tool-row{display:flex;flex-wrap:wrap;gap:12px;}
+  .tool-pill{font-family:var(--mono);font-size:.84rem;padding:11px 20px;border:1px solid var(--line-paper);border-radius:10px;background:var(--card);transition:border-color .2s,color .2s;}
+  .tool-pill:hover{border-color:var(--coral);color:var(--coral-dark);}
+
+  /* ---------- SAMPLES ---------- */
+  .sample-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .sample-card svg{border-radius:var(--radius);border:1px solid var(--line-paper);}
+  .sample-caption{margin:16px 2px 0;font-size:.86rem;color:rgba(27,35,30,.72);}
+  @media (max-width:880px){.sample-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto;}}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  .contact{background:var(--ink);color:var(--text-on-ink);padding:104px 0 48px;}
+  .contact-inner{max-width:660px;margin:0 auto;text-align:center;}
+  .contact h2{font-family:var(--display);font-size:clamp(1.85rem,4.4vw,2.7rem);margin:.5em 0 16px;}
+  .contact p{color:var(--muted-on-ink);font-size:1.03rem;margin:0 0 32px;}
+  .contact-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:58px;}
+  .footer-bottom{border-top:1px solid var(--line-ink);padding-top:26px;text-align:center;font-family:var(--mono);font-size:.72rem;color:var(--muted-on-ink);}
+  .footer-bottom a:hover{color:var(--text-on-ink);}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+  a:focus-visible,button:focus-visible{outline:2px solid var(--coral);outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <div class="nav-logo">AMRA · SMM</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#accounts">Accounts</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#samples">Samples</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="nav-cta" href="mailto:amra.camid@gmail.com">Hire Me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <span class="eyebrow" style="color:var(--text-on-ink)">SOCIAL · CONTENT · COMMUNITY</span>
+      <img class="hero-photo" src="https://amra2026.github.io/amraSEOportfolio/amrahata-paalisbo.png" alt="Photo of Amrahata Paalisbo">
+      <h1>Amrahata Paalisbo</h1>
+      <p class="hero-tagline">Social Media Manager · Content Creation · Community Growth</p>
+      <p class="hero-body">I plan, create, and manage social content for wellness, lifestyle, and home-services brands — from the first content calendar to the comments section. A background in SEO and digital marketing means I think about how content gets found, not just how it looks.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:amra.camid@gmail.com">Hire Me</a>
+        <a class="btn btn-ghost" href="#accounts">See the Accounts I Manage</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">14+</div><div class="stat-label">Years in Digital Marketing</div></div>
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">Platforms Actively Managed</div></div>
+      <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Years Remote Work</div></div>
+      <div class="stat"><div class="stat-num">End-to-End</div><div class="stat-label">Strategy, Content &amp; Reporting</div></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About</span>
+        <h2>From SEO to Social, With the Same Eye for Detail</h2>
+      </div>
+      <div class="about-text reveal">
+        <p>My career started in 2012 as a Virtual Assistant. Since then I've worked as a customer service representative, recruiter, SEO specialist, and digital marketing professional — picking up most of it by doing the work, not by sitting through a course on it.</p>
+        <p>Social media management became a steady part of that work along the way. Today I manage it end-to-end: planning content calendars, writing captions, designing graphics in Canva, editing short clips in CapCut, scheduling posts, replying to comments and messages, and reporting on what's working.</p>
+        <p>I currently manage social strategy and content for a wellness and yoga brand across Instagram, Facebook, and Pinterest, and support Pinterest content for a national HVAC and air filtration brand. My SEO background carries over too — I think about searchable captions and Pinterest SEO, not just what looks good in the grid.</p>
+        <div class="pill-row">
+          <span class="pill">Content Calendars</span>
+          <span class="pill">Caption Writing</span>
+          <span class="pill">Canva Design</span>
+          <span class="pill">CapCut Editing</span>
+          <span class="pill">Community Management</span>
+          <span class="pill">Pinterest SEO</span>
+          <span class="pill">Cross-Platform Repurposing</span>
+          <span class="pill">Performance Reporting</span>
+          <span class="pill">Brand Voice</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACCOUNTS ===== -->
+  <section class="section" id="accounts" style="background:var(--card);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Accounts</span>
+        <h2>A Few Brands I Manage Social For</h2>
+      </div>
+      <p class="lede reveal">Day-to-day content, strategy notes, and performance numbers are confidential under client NDA. These public profiles are where the actual work lives — feel free to take a look.</p>
+
+      <div class="feed-grid reveal">
+        <a class="account-card" href="https://www.instagram.com/zenmasteryogacom/" target="_blank" rel="noopener">
+          <div>
+            <div class="account-platform">Instagram</div>
+            <div class="account-handle">@zenmasteryogacom</div>
+            <div class="account-niche">Wellness &amp; Yoga</div>
+          </div>
+          <div class="account-desc">Full content strategy, creation, scheduling, and community management.</div>
+          <div class="account-link">Visit profile →</div>
+        </a>
+        <a class="account-card" href="https://www.facebook.com/ZenMasterYogacom" target="_blank" rel="noopener">
+          <div>
+            <div class="account-platform">Facebook</div>
+            <div class="account-handle">ZenMasterYogacom</div>
+            <div class="account-niche">Wellness &amp; Yoga</div>
+          </div>
+          <div class="account-desc">Adapting and cross-posting content for Facebook's audience and format.</div>
+          <div class="account-link">Visit page →</div>
+        </a>
+        <a class="account-card" href="https://au.pinterest.com/zenmasteryoga/" target="_blank" rel="noopener">
+          <div>
+            <div class="account-platform">Pinterest · AU</div>
+            <div class="account-handle">zenmasteryoga</div>
+            <div class="account-niche">Wellness &amp; Yoga</div>
+          </div>
+          <div class="account-desc">Visual search content and Pinterest-specific strategy for the same brand.</div>
+          <div class="account-link">Visit profile →</div>
+        </a>
+        <a class="account-card" href="https://www.pinterest.com/FilterbuyUS/" target="_blank" rel="noopener">
+          <div>
+            <div class="account-platform">Pinterest</div>
+            <div class="account-handle">FilterbuyUS</div>
+            <div class="account-niche">Home Services · HVAC</div>
+          </div>
+          <div class="account-desc">Supporting Pinterest content as part of a national HVAC brand's visual presence.</div>
+          <div class="account-link">Visit profile →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Process</span>
+        <h2>How a Week of Content Actually Gets Made</h2>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="step" data-num="01">
+          <h3>Plan</h3>
+          <p>I build the content calendar around brand pillars, what's coming up, and what's performed well before.</p>
+        </div>
+        <div class="step" data-num="02">
+          <h3>Create</h3>
+          <p>Captions get written, graphics get designed in Canva, and short clips get edited in CapCut.</p>
+        </div>
+        <div class="step" data-num="03">
+          <h3>Schedule</h3>
+          <p>Posts get queued for when each platform's audience is actually online.</p>
+        </div>
+        <div class="step" data-num="04">
+          <h3>Engage</h3>
+          <p>Comments and messages get replies, and I look for conversations worth joining.</p>
+        </div>
+        <div class="step" data-num="05">
+          <h3>Report</h3>
+          <p>I check each platform's own analytics for what worked, then adjust the next calendar.</p>
+        </div>
+      </div>
+
+      <div class="callout reveal">
+        <span class="callout-label">My approach to AI tools</span>
+        <p>I use ChatGPT, Claude, and Gemini to speed up brainstorming and first drafts. The final caption, edit, and posting decision are always mine.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOOLS ===== -->
+  <section class="section" id="tools" style="background:var(--card);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Tools</span>
+        <h2>What I Actually Use</h2>
+      </div>
+      <div class="tool-row reveal">
+        <span class="tool-pill">CapCut</span>
+        <span class="tool-pill">Canva</span>
+        <span class="tool-pill">Meta Business Suite</span>
+        <span class="tool-pill">Pinterest Business</span>
+        <span class="tool-pill">Google Workspace</span>
+        <span class="tool-pill">Trello</span>
+        <span class="tool-pill">Asana</span>
+        <span class="tool-pill">ChatGPT</span>
+        <span class="tool-pill">Claude</span>
+        <span class="tool-pill">Gemini</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SAMPLES ===== -->
+  <section class="section" id="samples">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Samples</span>
+        <h2>A Few Original Concepts</h2>
+      </div>
+      <p class="lede reveal">Real client posts are off-limits under NDA, so these three are original pieces made for this portfolio — same tools and style I use day to day, not tied to any client brand.</p>
+
+      <div class="sample-grid reveal">
+        <figure class="sample-card">
+          <svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quote post concept reading Breathe in, begin again, that's the whole practice">
+            <defs>
+              <linearGradient id="qpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#92AC8B"/>
+                <stop offset="100%" stop-color="#EBE1C6"/>
+              </linearGradient>
+            </defs>
+            <rect width="1080" height="1080" fill="url(#qpGrad)"/>
+            <path d="M 760 60 A 340 340 0 0 1 1040 360" fill="none" stroke="#1B231E" stroke-opacity="0.18" stroke-width="2"/>
+            <text x="90" y="130" font-family="Space Mono, monospace" font-size="26" letter-spacing="3" fill="#1B231E" fill-opacity="0.65">MORNING PRACTICE</text>
+            <line x1="90" y1="158" x2="230" y2="158" stroke="#1B231E" stroke-opacity="0.4" stroke-width="2"/>
+            <text x="540" y="430" font-family="Instrument Serif, serif" font-style="italic" font-size="68" fill="#1B231E" text-anchor="middle">Breathe in.</text>
+            <text x="540" y="515" font-family="Instrument Serif, serif" font-style="italic" font-size="68" fill="#1B231E" text-anchor="middle">Begin again.</text>
+            <text x="540" y="590" font-family="Instrument Serif, serif" font-style="italic" font-size="46" fill="#1B231E" text-anchor="middle">That's the whole</text>
+            <text x="540" y="646" font-family="Instrument Serif, serif" font-style="italic" font-size="46" fill="#1B231E" text-anchor="middle">practice.</text>
+            <circle cx="500" cy="950" r="5" fill="#1B231E" fill-opacity="0.35"/>
+            <circle cx="540" cy="950" r="5" fill="#1B231E" fill-opacity="0.35"/>
+            <circle cx="580" cy="950" r="5" fill="#1B231E" fill-opacity="0.35"/>
+          </svg>
+          <figcaption class="sample-caption">Quote Post Concept — the kind of calm, on-brand static post that performs well for wellness and motivational accounts.</figcaption>
+        </figure>
+
+        <figure class="sample-card">
+          <svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reel cover concept reading 3 stretches before bed">
+            <defs>
+              <linearGradient id="rcBg" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#202B24"/>
+                <stop offset="100%" stop-color="#141B17"/>
+              </linearGradient>
+              <radialGradient id="rcGlow" cx="50%" cy="42%" r="55%">
+                <stop offset="0%" stop-color="#E0603D" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#E0603D" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="1080" height="1080" fill="url(#rcBg)"/>
+            <rect width="1080" height="1080" fill="url(#rcGlow)"/>
+            <text x="90" y="130" font-family="Space Mono, monospace" font-size="24" letter-spacing="3" fill="#F3EFE3" fill-opacity="0.6">EVENING WIND-DOWN</text>
+            <text x="90" y="460" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="108" fill="#F3EFE3">3 STRETCHES</text>
+            <rect x="75" y="548" width="470" height="92" fill="#E0603D"/>
+            <text x="90" y="618" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="108" fill="#1B231E">BEFORE</text>
+            <text x="90" y="760" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="108" fill="#F3EFE3">BED</text>
+            <text x="90" y="980" font-family="Space Mono, monospace" font-size="24" fill="#F3EFE3" fill-opacity="0.55">REEL COVER · 0:32</text>
+            <g transform="translate(940,960)">
+              <circle r="34" fill="none" stroke="#F3EFE3" stroke-opacity="0.5" stroke-width="2"/>
+              <path d="M -8 -14 L 16 0 L -8 14 Z" fill="#F3EFE3"/>
+            </g>
+          </svg>
+          <figcaption class="sample-caption">Reel Cover Concept — a cover frame built the same way I'd design it before exporting a short clip in CapCut.</figcaption>
+        </figure>
+
+        <figure class="sample-card">
+          <svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carousel intro concept reading 5 morning habits for a calmer day">
+            <rect width="1080" height="1080" fill="#F2EEE2"/>
+            <path d="M 0 860 C 260 800 420 920 680 860 C 860 818 980 870 1080 840" fill="none" stroke="#7E9A80" stroke-width="3" stroke-opacity="0.55"/>
+            <text x="90" y="130" font-family="Space Mono, monospace" font-size="24" letter-spacing="3" fill="#1B231E" fill-opacity="0.6">SWIPE-THROUGH SERIES</text>
+            <text x="90" y="430" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="92" fill="#1B231E">5 MORNING</text>
+            <text x="90" y="540" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="92" fill="#1B231E">HABITS FOR A</text>
+            <text x="90" y="650" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="92" fill="#1B231E">CALMER DAY</text>
+            <text x="90" y="730" font-family="Instrument Serif, serif" font-style="italic" font-size="34" fill="#1B231E" fill-opacity="0.7">swipe for the full list</text>
+            <g transform="translate(520,718)">
+              <path d="M0 0 L26 10 L0 20" fill="none" stroke="#E0603D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <g transform="translate(870,970)">
+              <circle cx="0" cy="0" r="6" fill="#E0603D"/>
+              <circle cx="22" cy="0" r="6" fill="none" stroke="#1B231E" stroke-opacity="0.3" stroke-width="2"/>
+              <circle cx="44" cy="0" r="6" fill="none" stroke="#1B231E" stroke-opacity="0.3" stroke-width="2"/>
+              <circle cx="66" cy="0" r="6" fill="none" stroke="#1B231E" stroke-opacity="0.3" stroke-width="2"/>
+            </g>
+            <text x="780" y="1010" font-family="Space Mono, monospace" font-size="22" fill="#1B231E" fill-opacity="0.5">01 / 06</text>
+          </svg>
+          <figcaption class="sample-caption">Carousel Intro Concept — an opening slide for a tips carousel, a format that consistently performs well for lifestyle content.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== CONTACT / FOOTER ===== -->
+<footer class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <span class="eyebrow" style="color:var(--text-on-ink)">Contact</span>
+      <h2>Ready for Steady Hands on Your Social Accounts?</h2>
+      <p>I'm open to new social media management work — content creation, scheduling, community management, and basic video editing included. If your brand needs someone dependable running the day-to-day, let's talk.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:amra.camid@gmail.com">Send an Email</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/amrahata-paalisbo-399144167/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Amrahata Camid Paalisbo · Social Media Manager · Davao City, Philippines<br>
+      <a href="mailto:amra.camid@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/amrahata-paalisbo-399144167/" target="_blank" rel="noopener">LinkedIn</a> · <a href="tel:+639351109339">+63 935 110 9339</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => obs.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+</script>
+
+</body>
+</html>
